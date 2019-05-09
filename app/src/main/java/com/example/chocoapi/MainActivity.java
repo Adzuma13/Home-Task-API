@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<MainDeal>() {
             @Override
             public void onResponse(Call<MainDeal> call, Response<MainDeal> response) {
-                List<Deal> list;
-                list = (List<Deal>) response.body();
-                Log.i("myTag", "OnResponse: " + list.get(0).getImage_url());
+                MainDeal mainDeal = response.body();
+                List<Deal> list = mainDeal.getResultList();
+                Log.i("myTag", "OnResponse");
                 dealAdapter.setDealList(list);
             }
 

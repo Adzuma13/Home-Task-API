@@ -25,6 +25,7 @@ public class DealViewHolder extends RecyclerView.ViewHolder {
         this.rate = itemView.findViewById(R.id.rate);
         this.shortTitle = itemView.findViewById(R.id.title_short);
         this.titleRV = itemView.findViewById(R.id.titleRV);
+        this.dealImage = itemView.findViewById(R.id.dealImage);
     }
 
 
